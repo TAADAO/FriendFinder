@@ -10,4 +10,8 @@ Heroku link is found below:
 
 https://rocky-hamlet-72364.herokuapp.com/
 
+And of course, the portfolio has also been updated with the Friend Finder link: 
+
+https://taadao.github.io/UpdatedPortfolio/portfolio.html
+
 
