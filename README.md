@@ -5,3 +5,9 @@ The purpose of this specific app is to combine front-end and back-end elements t
 Some part of the program were easy to put together, such as the server.js, home page, and friends.js file. The HTML route file wasn't hard, but the API route file took a little time to do. 
 
 The biggest project was the survey page, as that was the page I used to geneate the questions. I thought about creating a separate questions file, but decided just to include them and the javascript in the html. I found good information in regards to the modals at getbootstrap.com, and found myself copying a lot of code that helped with producting the Modal. The JQuery aspect of it was the toughest part, as it was a stark reminder I need to brush up more on my JQuery coding. 
+
+Heroku link is found below: 
+
+https://rocky-hamlet-72364.herokuapp.com/
+
+
