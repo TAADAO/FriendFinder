@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Friend Finder!</title>
+    <!-- Latest compiled and minified CSS & JS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card card-default">
+                <div class="card-heading">
+                    <h4 class="card-title"> Your Match Questions!</h4>
+                </div>
+                <div class="card-body">
+                    <form role="form" action="./api/surveySubmit" method="post">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" class="form-control" id="name"></input>
+                        </div>
+                        <div class="form-group">
+                            <label for="photo"> Photo </label>
+                            <label class="control-label"> Select File</label>
+                            <input id="photo" type="file" class="file">
+                        </div>
+                        <div class="btn-group">
+                            <p>Question 1</p>
+                            <p> My mind races a million miles an hour with unexplored ideas.</p>
+                            <select id="q1">
+                                <option value="1"> 1 (That's nothing like me!)</option>
+                                <option value="2"> 2 </option>
+                                <option value="3"> 3 </option>
+                                <option value="4"> 4 </option>
+                                <option value="5"> 5 (That's totally just like me!)</option>
+                            </select>
+                            <hr>
+                            <p>Question 2</p>
+                            <p> I prefer staying at home instead of going out.</p>
+                            <select id="q2">
+                                <option value="1"> 1 (That's nothing like me!)</option>
+                                <option value="2"> 2 </option>
+                                <option value="3"> 3 </option>
+                                <option value="4"> 4 </option>
+                                <option value="5"> 5 (That's totally just like me!)</option>
+                            </select>
+                            <hr>
+                            <p>Question 3</p>
+                            <p> I do some things just out of sheer curiosity.</p>
+                            <select id="q3">
+                                <option value="1"> 1 (That's nothing like me!)</option>
+                                <option value="2"> 2 </option>
+                                <option value="3"> 3 </option>
+                                <option value="4"> 4 </option>
+                                <option value="5"> 5 (That's totally just like me!)</option>
+                            </select>
+                            <hr>
+                            <p>Question 4</p>
+                            <p> It takes a lot to make me really angry.</p>
+                            <select id="q4">
+                                <option value="1"> 1 (That's nothing like me!)</option>
+                                <option value="2"> 2 </option>
+                                <option value="3"> 3 </option>
+                                <option value="4"> 4 </option>
+                                <option value="5"> 5 (That's totally just like me!)</option>
+                            </select>
+                            <hr>
+                            <p>Question 5</p>
+                            <p> I prefer the hard truth over catering to people's sensitivities.</p>
+                            <select id="q5">
+                                <option value="1"> 1 (That's nothing like me!)</option>
+                                <option value="2"> 2 </option>
+                                <option value="3"> 3 </option>
+                                <option value="4"> 4 </option>
+                                <option value="5"> 5 (That's totally just like me!)</option>
+                            </select>
+                            <hr>
+                            <p>Question 6</p>
+                            <p> I tend to be skeptical about fantastic or grandiose ideas.</p>
+                            <select id="q6">
+                                <option value="1"> 1 (That's nothing like me!)</option>
+                                <option value="2"> 2 </option>
+                                <option value="3"> 3 </option>
+                                <option value="4"> 4 </option>
+                                <option value="5"> 5 (That's totally just like me!)</option>
+                            </select>
+                            <hr>
+                            <p>Question 7</p>
+                            <p> It's easy for me to stay relaxed and focused under pressure.</p>
+                            <select id="q7">
+                                <option value="1"> 1 (That's nothing like me!)</option>
+                                <option value="2"> 2 </option>
+                                <option value="3"> 3 </option>
+                                <option value="4"> 4 </option>
+                                <option value="5"> 5 (That's totally just like me!)</option>
+                            </select>
+                            <hr>
+                            <p>Question 8</p>
+                            <p> I generally am in a better mood after spending time with people.</p>
+                            <select id="q8">
+                                <option value="1"> 1 (That's nothing like me!)</option>
+                                <option value="2"> 2 </option>
+                                <option value="3"> 3 </option>
+                                <option value="4"> 4 </option>
+                                <option value="5"> 5 (That's totally just like me!)</option>
+                            </select>
+                            <hr>
+                            <p>Question 9</p>
+                            <p> Sports are a huge passion of mine.</p>
+                            <select id="q9">
+                                <option value="1"> 1 (That's nothing like me!)</option>
+                                <option value="2"> 2 </option>
+                                <option value="3"> 3 </option>
+                                <option value="4"> 4 </option>
+                                <option value="5"> 5 (That's totally just like me!)</option>
+                            </select>
+                            <hr>
+                            <p>Question 10</p>
+                            <p> I am highly stimulated by brain teasers and other mental exercises.</p>
+                            <select id="q10">
+                                <option value="1"> 1 (That's nothing like me!)</option>
+                                <option value="2"> 2 </option>
+                                <option value="3"> 3 </option>
+                                <option value="4"> 4 </option>
+                                <option value="5"> 5 (That's totally just like me!)</option>
+                            </select>
+                        </div>
+                        <div class="modal fade" id="myModal" , tabIndex="-1" role="dialog"
+                            aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <button type="submit" class="btn btn-primary submit" data-toggle="modal"
+                                id="submitButton">Submit</button>
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header"></div>
+                                    <h5 class="modal-title" id="exampleModalLabel"> Your Best Match</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-Label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    <div class="modal-body">
+                                        ...
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal"> Close
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+            </form>
+        </div>
+    </div>
+    </div>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <p><a href="/api/friends"> API Friends List </a> | <a href="https://github.com/TAADAO/FriendFinder"> GitHub
+                    Repo </a></p>
+        </div>
+    </footer>
+
+    <script type = "text/javascript">
+    $(document).ready();
+$("#submitButton").on("click", function(){
+    event.preventDefault();
+
+    var newFriend = {
+        name: $("#name").val().trim(),
+        photo: $("#photo").val().trim(),
+        scores: [
+            $("#q1").val().trim(),
+            $("#q2").val().trim(),
+            $("#q3").val().trim(),
+            $("#q4").val().trim(),
+            $("#q5").val().trim(),
+            $("#q6").val().trim(),
+            $("#q7").val().trim(),
+            $("#q8").val().trim(),
+            $("#q9").val().trim(),
+            $("#q10").val().trim()
+        ]
+    };
+
+    console.log(newFriend);
+
+    $.post(".api/surveySubmit", newFriend,
+    function(data) {
+        $("#name").text(data.name);
+        $("#photo").attr("src", data.photo);
+        $("#myModal").text(data.name);
+        
+    });
+});
+
+    </script>
+</body>
+</html>
